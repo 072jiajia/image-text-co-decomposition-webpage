@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>CEVR</title>
+
+  <style>
+    .responsive {
+      width: 100%
+    }
+  </style>
+
+  <style type="text/css">
+    /* Add a container class to center the table */
+    .table-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      /* Adjust the height if needed */
+      margin-top: 0px;
+    }
+
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .tg td {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .tg th {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .tg .tg-eiei {
+      background-color: #ffffff;
+      border-color: #9b9b9b;
+      color: #009901;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .tg .tg-7s0l {
+      background-color: #ffffff;
+      border-color: #9b9b9b;
+      color: #000000;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .tg .tg-jb0k {
+      background-color: #ffffff;
+      border-color: #9b9b9b;
+      color: #000000;
+      text-align: center;
+      vertical-align: middle
+    }
+  </style>
+
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦊</text></svg>">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/video_comparison.js"></script>
+  <script src="js/result.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+
+  <div class="container" id="main">
+    <div class="row">
+      <h2 class="col-md-12 text-center">
+        <b>
+          Image-Text Co-Decomposition for</br>
+          Text-Supervised Semantic Segmentation</br>
+        </b>
+        <small>
+          CVPR 2024
+        </small>
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul class="list-inline">
+          <li>
+            <a>
+              Ji-Jia Wu
+            </a>
+            </br>NTU
+          </li>
+          <li>
+            <a href="https://andyrochi.github.io/">
+              Andy Chia-Hao Chang
+            </a>
+            </br>NYCU
+          </li>
+          <li>
+            <a>
+              Chieh-Yu Chuang
+            </a>
+            </br>NYCU
+          </li>
+          <li>
+            <a>
+              Chun-Pei Chen
+            </a>
+            </br>NYCU
+          </li>
+          <li>
+            <a href="https://yulunalexliu.github.io/">
+              Yu-Lun Liu
+            </a>
+            </br>NYCU
+          </li>
+        </ul>
+
+        <ul class="list-inline">
+          <li>
+            <a href="https://minhungchen.netlify.app/">
+              Min-Hung Chen
+            </a>
+            </br>NVIDIA
+          </li>
+          <li>
+            <a href="https://eborboihuc.github.io/">
+              Hou-Ning Hu
+            </a>
+            </br>MediaTek
+          </li>
+          <li>
+            <a>
+              Yung-Yu Chuang
+            </a>
+            </br>NTU
+          </li>
+          <li>
+            <a href="https://sites.google.com/site/yylinweb/">
+              Yen-Yu Lin
+            </a>
+            </br>NYCU
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <ul class="nav nav-pills nav-justified">
+          <li>
+            <a href="https://arxiv.org/abs/2404.04231">
+              <image src="img/paper_thumbnail.png" height="60px">
+                <h4><strong>Paper</strong></h4>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/072jiajia/image-text-co-decomposition">
+              <image src="img/github.png" height="60px">
+                <h4><strong>Code</strong></h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="section">
+      <div class="row center">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="image-container">
+            <img class="responsive-img" src="img/teaser.png" alt="Image Description">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3><b>
+            Abstract</b>
+        </h3>
+        <p class="text-justify">
+          This paper addresses text-supervised semantic segmentation, aiming to learn a model capable of segmenting
+          arbitrary visual concepts within images by using only image-text pairs without dense annotations. Existing
+          methods have demonstrated that contrastive learning on image-text pairs effectively aligns visual segments
+          with the meanings of texts. We notice that there is a discrepancy between text alignment and semantic
+          segmentation: A text often consists of multiple semantic concepts, whereas semantic segmentation strives to
+          create semantically homogeneous segments. To address this issue, we propose a novel framework, Image-Text
+          Co-Decomposition (CoDe), where the paired image and text are jointly decomposed into a set of image regions
+          and a set of word segments, respectively, and contrastive learning is developed to enforce region-word
+          alignment. To work with a vision-language model, we present a prompt learning mechanism that derives an extra
+          representation to highlight an image segment or a word segment of interest, with which more effective features
+          can be extracted from that segment. Comprehensive experimental results demonstrate that our method performs
+          favorably against existing text-supervised semantic segmentation methods on six benchmark datasets.
+        </p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3><b>
+            Training pipeline for image-text co-decomposition
+          </b>
+        </h3>
+        <br>
+        <image src="img/overview.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+        <br>
+        <p class="text-justify">
+          Our method consists of three major modules, including (a) the image-text co-segmentation module where the
+          image and text segmenters estimate the region and word masks according to a selected noun, respectively, (b)
+          the region-word highlighting module where the estimated masks together with two learnable prompts produce the
+          highlighted image and text, and (c) the region-word alignment module where contrastive learning is applied to
+          the embedded object regions and word segments to accomplish region-word alignment.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3><b>
+            Qualitative results
+          </b>
+        </h3>
+        <br>
+        <image src="img/visualization.png" style="width:100%;" class="img-responsive center-block" alt="overview">
+        </image>
+        <br>
+        <p class="text-justify">
+          The first two rows display text and images, representing input image-text pairs. In each text, nouns are
+          underlined with different colors. Our method uses these nouns as queries for performing image-text
+          co-decomposition. Using our image-text co-decomposition method, the last two rows depict the method's output,
+          where regions and word segments associated with different nouns appear in corresponding colors.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3><b>
+            Quantitative results
+          </b>
+        </h3>
+        <br>
+        <image src="img/sota.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+        <br>
+        <p class="text-justify">
+          The proposed method is compared with nine SOTA methods on six popular semantic segmentation datasets: PASCAL
+          VOC (VOC), PASCAL Context (Context), COCO-Object (Object), COCO-Stuff (Stuff), Cityscapes (City) and ADE20K
+          (ADE). For each compared method, the dataset column lists its training datasets. Several methods used datasets
+          in addition to CC3M and CC12M, such as YFCC14M, COCO and RedCaps12M. When applicable, we also provide an
+          average mIoU across all six datasets. For each dataset, the best method is indicated by bold fonts, whereas
+          the second best method is underlined.
+        </p>
+      </div>
+    </div>
+
+
+    <br>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>
+          <b>
+            Citation
+          </b>
+        </h3>
+        <div class="form-group col-md-12 col-md-offset-0">
+          <textarea id="bibtex" class="form-control" readonly>
+@article{wu2024image,
+  title={Image-Text Co-Decomposition for Text-Supervised Semantic Segmentation},
+  author={Wu, Ji-Jia and Chang, Andy Chia-Hao and Chuang, Chieh-Yu and Chen, Chun-Pei and 
+          Liu, Yu-Lun and Chen, Min-Hung and Hu, Hou-Ning and Chuang, Yung-Yu and Lin, Yen-Yu},
+  journal={arXiv preprint arXiv:2404.04231},
+  year={2024}
+}</textarea>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>
+          <b>
+            Acknowledgements
+          </b>
+        </h3>
+        <p class="text-justify">
+          This work was supported in part by the National Science and Technology Council (NSTC) under grants
+          112-2221-E-A49-090-MY3, 111-2628-E-A49-025-MY3, 112-2634-F-002-005, 112-2634-F-002-006, and
+          110-2221-E-002-124-MY3, and NTU under grants 112L9009. This work was funded in part by MediaTek and NVIDIA.
+          <br><br>
+          The website template was borrowed from <a href="https://skchen1993.github.io/CEVR_web/">CEVR</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
